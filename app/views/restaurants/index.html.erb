@@ -1,0 +1,13 @@
+<div class="container bg-light">
+  <h1 class="text-center">Restaurants</h1>
+  <%= link_to 'Add a new restaurant', new_restaurant_path %>
+  <% @restaurants.each do |restaurant| %>
+    <div class="bg-white border m-4 p-2">
+      <h3><%= restaurant.name %></h3>
+      <p>Category: <%= restaurant.category %></p>
+      <p>Address: <%= restaurant.address %></p>
+      <p>Phone number: <%= restaurant.phone_number %></p>
+      <%= link_to 'More info...', restaurant %>
+    </div>
+  <% end %>
+</div>
